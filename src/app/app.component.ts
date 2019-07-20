@@ -31,7 +31,7 @@ export class AppComponent {
   th : string = "TH";
   en : string = '<b>EN<b>';
   enColor : string = 'greenyellow';
-
+  spath = "../assets/img/angular.png";
   navbarOpen : boolean = false;
   engLang : boolean  = true;
   thLang : boolean  = false;
@@ -57,6 +57,7 @@ export class AppComponent {
     this.thLang = true;
     this.en  = 'EN';
     this.th  = '<b>TH</b>';
+ 
   }
   onclickChangeEng(){
     this.main = "Hello ! Welcome to My Website"
