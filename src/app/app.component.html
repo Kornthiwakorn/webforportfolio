@@ -1,0 +1,588 @@
+<div *ngIf="engLang==true">
+  <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+      <div class="container-fluid">
+        <div class="row">
+
+          <span class="navbar-nav col-12 col-md-4 col-lg-4  justify-content-start">
+            <a class="navbar-brand" (click)="onClickHome()">
+              <img src="../assets/angular.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              Thiwakorn<sub>by angular7</sub>
+            </a>
+
+          </span>
+
+          <ul class="navbar-nav col-12 col-md-4 col-lg-4  ">
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickHome()" appDirectiveMenu>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickAbout()" appDirectiveMenu>About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickTech()" appDirectiveMenu>Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickProject()" appDirectiveMenu>Projects</a>
+            </li>
+          </ul>
+          <span class="navbar-nav col-12 col-md-4 col-lg-4 justify-content-end ">
+
+            <span class="Thai" (click)="onclickChangeTh()" [innerHTML]="th"></span><span
+              style="color: azure; font-size: 12px ; padding-top: 10px"> |
+            </span><span class="Eng" [style.color]="enColor" [innerHTML]="en"></span>
+          </span>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div #home id="homeSec" class="background"></div>
+  <div class="centered">{{main}}</div>
+  <div class="container">
+    <div class="aboutMe" #about>About Me</div>
+
+
+    <div class="card profileCard  ">
+      <img class="card-img-top profilePic" src="../assets/profile.png" alt="Card image cap">
+    </div><br><br>
+
+
+    <div class="nameAbout">Thiwakorn Chueykead</div>
+    <b>Age</b> : {{age}} <br>
+    <b>Date Of Birth</b> : {{birthdate}}<br>
+    <b>Religion</b> : {{religion}}&nbsp;&nbsp;
+    <b>Nationality</b> : {{nationality}}<br>
+    <b>Personality</b> : {{personality}}<br>
+    <b>E-mail</b> :{{email}}
+    <hr>
+    <b>Contact</b><br><br>
+    <span><a href="#" (click)="onclickURL5()"><i class="fa fa-facebook-official" style="font-size:36px"></i></a></span>
+    <span><a href="#" (click)="onclickURL6()"><i class="fa fa-github" style="font-size:36px"></i></a></span>
+    <hr>
+  </div>
+
+  <div class="container">
+
+    <div id="techSec">
+      <div class="techNology" #tech>Programming Skills</div>
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+
+              <h5 class="card-title">Angular 7</h5>
+            </div>
+            <img class="card-img-top" src="../assets/angular.png" alt="Card image cap">
+            <div class="card-body">
+              (Practising)
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Ionic 3</h5>
+            </div>
+            <img class="card-img-top" src="../assets/ionic.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Vue.js</h5>
+            </div>
+            <img class="card-img-top" src="../assets/vue.png" alt="Card image cap">
+            <div class="card-body">
+              (Basic)
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card cardHtml">
+            <div class="card-header skill">
+              <h5 class="card-title">HTML5</h5>
+            </div>
+            <img class="card-img-top" src="../assets/html.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">CSS3</h5>
+            </div>
+            <img class="card-img-top" src="../assets/css.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">TypeScript</h5>
+            </div>
+            <img class="card-img-top" src="../assets/typescript.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">JavaScript</h5>
+            </div>
+            <img class="card-img-top" src="../assets/js.png" alt="Card image cap">
+            <div class="card-body">
+                <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Java</h5>
+            </div>
+            <img class="card-img-top" src="../assets/java.png" alt="Card image cap">
+            <div class="card-body">
+                <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Git</h5>
+            </div>
+            <img class="card-img-top" src="../assets/git.png" alt="Card image cap">
+            <div class="card-body">
+              (Basic)
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card firebaseCard">
+            <div class="card-header skill">
+              <h5 class="card-title">Firebase</h5>
+            </div>
+            <img class="card-img-top" src="../assets/firebase.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Commig Soon</h5>
+            </div>
+            <img class="card-img-top" src="../assets/comingsoon.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                    style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                </div>
+              </h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Commig Soon</h5>
+            </div>
+            <img class="card-img-top" src="../assets/comingsoon.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                    style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+              </h5>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div id="projectSec">
+      <div class="project" #project>My Projects</div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="card" appDirectivePicture>
+            <div class="card-header">
+              1. Application of IoT For Car Parking System.
+            </div>
+            <div class="card-body cardProject">
+              <p>Application of IoT For Car Parking System is divided into 3 sections. <br><br></p>
+              <p><b>Section 1</b><br>Web Application for Admin by Vue.js, Firebase Realtime and Google Maps APIs
+                <button type="button" class="btn btn-dark float-right" (click)="onclickURL1()">Go to Github >></button>
+              </p>
+              <hr>
+              <p><b>Section 2</b><br>Mobile Application for Users by Ionic Framework, Firebase Realtime and Google Maps
+                APIs
+                <button type="button" class="btn btn-dark float-right" (click)="onclickURL2()">Go to Github >></button>
+              </p>
+              <hr>
+              <p><b>Section 3</b><br>IoT Device by Arduino IDE, NodeMCU esp8266, Ultrasonic hc-sr04p and Firebase
+                Realtime
+                <button type="button" class="btn btn-dark float-right" (click)="onclickURL3()">Go to Github >></button>
+              </p>
+            </div>
+            <div class="card-footer ">
+              ― Commits on Jul 3, 2019
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="card" appDirectivePicture>
+            <div class="card-header">
+              2. BuildSpecPc
+            </div>
+            <div class="card-body cardProject">
+              <p>BuildSpecPc by Java Programming and MySql <button type="button" class="btn btn-dark float-right"
+                  (click)="onclickURL1()">Go to Github >></button></p>
+            </div>
+            <div class="card-footer">
+              ― Commits on Jul 3, 2019
+            </div>
+          </div>
+        </div>
+        <div class="empty">
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <section class="footer ">
+    Created by Thiwakorn Chueykead
+  </section>
+</div>
+
+
+
+
+<div *ngIf="thLang==true">
+  <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+      <div class="container-fluid">
+        <div class="row">
+
+          <span class="navbar-nav col-12 col-md-4 col-lg-4  justify-content-start">
+            <a class="navbar-brand" (click)="onClickHome()">
+              <img src="../assets/angular.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              Thiwakorn<sub>by angular7</sub>
+            </a>
+
+          </span>
+
+          <ul class="navbar-nav col-12 col-md-4 col-lg-4  ">
+
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickHome()" appDirectiveMenu>หน้าหลัก</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickAbout()" appDirectiveMenu>ประวัติส่วนตัว</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickTech()" appDirectiveMenu>ทักษะ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onClickProject()" appDirectiveMenu>โปรเจ็ค</a>
+            </li>
+          </ul>
+          <span class="navbar-nav col-12 col-md-4 col-lg-4 justify-content-end ">
+
+            <span class="Thai" [style.color]="enColor" [innerHTML]="th"></span><span
+              style="color: azure; font-size: 12px ; padding-top: 10px"> |
+            </span><span class="Eng" (click)="onclickChangeEng()" [innerHTML]="en"></span>
+          </span>
+
+
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div #home id="homeSec" class="background"></div>
+  <div class="centered">{{main}}</div>
+  <div class="container">
+    <div class="aboutMe" #about>ประวัติ</div>
+
+
+    <div class="card profileCard  ">
+      <img class="card-img-top profilePic" src="../assets/profile.png" alt="Card image cap">
+    </div><br><br>
+
+
+    <div class="nameAbout">ทิวากร ช่วยเกิด</div>
+    <b>อายุ</b> : {{age}} <br>
+    <b>เกิดวันที่</b> : {{birthdate}}<br>
+    <b>ศาสนา</b> : {{religion}}&nbsp;&nbsp;
+    <b>สัญชาติ</b> : {{nationality}}<br>
+    <b>บุคลิกภาพ</b> : {{personality}}<br>
+    <b>อีเมลล์</b> :{{email}}
+    <hr>
+    <b>ติดต่อ</b><br><br>
+    <span><a href="#" (click)="onclickURL5()"><i class="fa fa-facebook-official" style="font-size:36px"></i></a></span>
+    <span><a href="#" (click)="onclickURL6()"><i class="fa fa-github" style="font-size:36px"></i></a></span>
+    <hr>
+  </div>
+
+  <div class="container">
+
+    <div id="techSec">
+      <div class="techNology" #tech>ทักษะโปรเเกรมมิ่ง</div>
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+
+              <h5 class="card-title">Angular 7</h5>
+            </div>
+            <img class="card-img-top" src="../assets/angular.png" alt="Card image cap">
+            <div class="card-body">
+              (อยู่ระหว่างการศึกษา)
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Ionic 3</h5>
+            </div>
+            <img class="card-img-top" src="../assets/ionic.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Vue.js</h5>
+            </div>
+            <img class="card-img-top" src="../assets/vue.png" alt="Card image cap">
+            <div class="card-body">
+              (พื้นฐาน)
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card cardHtml">
+            <div class="card-header skill">
+              <h5 class="card-title">HTML5</h5>
+            </div>
+            <img class="card-img-top " src="../assets/html.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">CSS3</h5>
+            </div>
+            <img class="card-img-top" src="../assets/css.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">TypeScript</h5>
+            </div>
+            <img class="card-img-top" src="../assets/typescript.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">JavaScript</h5>
+            </div>
+            <img class="card-img-top" src="../assets/js.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Java</h5>
+            </div>
+            <img class="card-img-top" src="../assets/java.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Git</h5>
+            </div>
+            <img class="card-img-top" src="../assets/git.png" alt="Card image cap">
+            <div class="card-body">
+              (พื้นฐาน)
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card firebaseCard">
+            <div class="card-header skill">
+              <h5 class="card-title">Firebase</h5>
+            </div>
+            <img class="card-img-top" src="../assets/firebase.png" alt="Card image cap">
+            <div class="card-body">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Commig Soon</h5>
+            </div>
+            <img class="card-img-top" src="../assets/comingsoon.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                    style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                </div>
+              </h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-header skill">
+              <h5 class="card-title">Commig Soon</h5>
+            </div>
+            <img class="card-img-top" src="../assets/comingsoon.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                    style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+              </h5>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div id="projectSec">
+      <div class="project" #project>โปรเจค</div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="card" appDirectivePicture>
+            <div class="card-header">
+              1. การประยุกต์ใช้อุปกรณ์ IoT กับระบบลานจอดรถ
+            </div>
+            <div class="card-body cardProject">
+              <p>การประยุกต์ใช้อุปกรณ์ IoT กับระบบลานจอดรถเเบ่งการทำงานออกเป็น 3 ส่วน ดังนี้ <br><br></p>
+              <p><b>ส่วนที่ 1</b><br>เว็บแอปพลิเคชัน(สำหรับผู้เเลระบบ) พัฒนาโดย Vue.js, Firebase Realtime เเละ Google
+                Maps APIs
+                <button type="button" class="btn btn-dark float-right" (click)="onclickURL1()">ไปยัง Github >></button>
+              </p>
+              <hr>
+              <p><b>ส่วนที่ 2</b><br>โมบายแอปพลิเคชันเพื่อเเสดงผล พัฒนาโดย Ionic Framework, Firebase Realtime เเละ
+                Google Maps APIs
+                <button type="button" class="btn btn-dark float-right" (click)="onclickURL2()">ไปยัง Github >></button>
+              </p>
+              <hr>
+              <p><b>ส่วนที่ 3</b><br>โปรเเกรมเชื่อมต่อกับอุปกรณ์ IoT พัฒนาโดย Arduino IDE, NodeMCU esp8266, Ultrasonic
+                hc-sr04p เเละ Firebase
+                Realtime
+                <button type="button" class="btn btn-dark float-right" (click)="onclickURL3()">ไปยัง Github >></button>
+              </p>
+            </div>
+            <div class="card-footer ">
+              ― Commits on Jul 3, 2019
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="card" appDirectivePicture>
+            <div class="card-header">
+              2. โปรเเกรมจัดสเปคเเละจัดซื้อคอมพิวเตอร์
+            </div>
+            <div class="card-body cardProject">
+              <p>โปรเเกรมจัดสเปคเเละซื้อคอมพิวเตอร์ พัฒนาโดยภาษา Java เชื่อมต่อกับฐานข้อมูล MySql <button type="button"
+                  class="btn btn-dark float-right" (click)="onclickURL1()">ไปยัง Github >></button></p>
+            </div>
+            <div class="card-footer">
+              ― Commits on Jul 3, 2019
+            </div>
+          </div>
+        </div>
+        <div class="empty">
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <section class="footer ">
+    Created by Thiwakorn Chueykead
+  </section>
+</div>
