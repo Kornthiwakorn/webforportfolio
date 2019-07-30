@@ -58,20 +58,22 @@ export class AppComponent {
     this.en  = 'EN';
     this.th  = '<b>TH</b>';
     
+    
   }
   onclickChangeEng(){
-    this.main = "Hello ! Welcome to My Website"
-    this.engLang = true;
-    this.thLang = false;
-    this.en  = '<b>EN</b>';
-    this.th = 'TH'
-    this.main = "Hello ! Welcome to My Website"
+  this.main = "Hello ! Welcome to My Website"
+  this.engLang = true;
+  this.thLang = false;
+  this.en  = '<b>EN</b>';
+  this.th = 'TH'
+  this.main = "Hello ! Welcome to My Website"
   this.birthdate= "09 October 1996";
   this.age= "22 years old";
   this.personality= 'fast learning and hard working, team player, positive attitude and open mind';
   this.nationality = "Thai";
   this.email  = "Thiwakorn.chueykead@hotmail.com";
   this.religion = "Buddhist";
+  
   }
   
   onClickHome(): void {
@@ -82,6 +84,7 @@ export class AppComponent {
   }
   onClickTech(): void {
     this.tech.nativeElement.scrollIntoView({behavior: 'smooth'}); 
+    
 
   }
 
